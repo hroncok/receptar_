@@ -10,11 +10,10 @@ def nacti_recept(jmeno):
     adresar_projektu = os.path.dirname(tenhle_script)
     adresar_receptu = os.path.join(adresar_projektu, 'recepty')
     cesta_k_receptu = os.path.join(adresar_receptu, jmeno)
-    with open(cesta_k_receptu, 'r') as f:
+    with open(cesta_k_receptu, 'r', encoding='utf-8') as f:
         return f.read()
 
 NAZVY_RECEPTU = os.listdir('recepty')
 
-# Máme zatím jen jeden recept, tak ho prostě ukážeme
 for recept in NAZVY_RECEPTU:
     print(nacti_recept(recept))
