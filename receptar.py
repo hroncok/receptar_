@@ -18,4 +18,6 @@ print(nacti_recept('titulek.txt'))
 NAZVY_RECEPTU = os.listdir('recepty')
 
 for recept in NAZVY_RECEPTU:
+    if recept == 'titulek.txt':
+        continue
     print(nacti_recept(recept))
